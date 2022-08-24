@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+
+	window.onload = function() {
+		var btnEl = document.querySelectorAll('.btn');
+		let ulEl = document.querySelector('.list-area');
+		
+		btnEl[0].onclick = function() {
+			let liEl = document.createElement('li')
+			liEl.textContent = 'hi'
+			ulEl.appendChild(liEl)
+		}
+		btnEl[1].onclick = function() {
+			var liEl = document.querySelectorAll('li')
+			ulEl.removeChild(liEl[liEl.length - 1])
+		}
+	}
+	
+	
+</script>
+
+</head>
+<body>
+
+<button class="btn">add</button>
+<button class="btn">delete</button>
+<hr />
+
+<ul class="list-area">
+	<li>버튼 클릭하세요</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+const xhttp = new XMLHttpRequest();
+console.dir(xhttp);
+
+let id = 100;
+let name = "test";
+let phone = "010-7777-7777";
+let email = "test@test.com";
+let queryStr = `id=${id}&name=${name}&phone=${phone}&email=${email}`;
+let urlStr = "http://localhost:8888/day05_js_ex01/data.do?" +  queryStr;
+
+xhttp.onload = function(e) {
+	let obj = JSON.parse(xhttp.responseText);
+	
+}
+
+xhttp.open("GET", urlStr, true);
+xhttp.send();
+
+</script>
+
+</body>
+</html>
